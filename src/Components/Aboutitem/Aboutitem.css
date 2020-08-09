@@ -1,0 +1,48 @@
+.aboutitem {
+  background-color: lightgrey;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  font-size: 1.2em;
+}
+.aboutitem > ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+p {
+  text-align: justify;
+}
+.aboutitem > ul > li {
+  padding: 50px;
+  flex: 1;
+}
+
+.about_item_img {
+  height: 250px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5em;
+}
+.maincircle {
+  display: flex;
+}
+.circle {
+  margin: 5px;
+  background-color: black;
+  color: white;
+  width: fit-content;
+  border-radius: 50%;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
