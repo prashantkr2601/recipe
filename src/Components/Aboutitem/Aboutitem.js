@@ -17,24 +17,28 @@ class Aboutitem extends React.Component {
   }
   componentDidMount() {
     window.scrollTo(0, 0);
-    Axios.get("http://starlord.hackerearth.com/recipe").then((result) => {
-      // console.log(result);
-      let data = result.data;
-      data.map((item) => {
-        if (`${item.id}` === `${this.props.match.params.id}`) {
-          this.setState({
-            id: item.id,
-            name: item.name,
-            image: item.image,
-            category: item.category,
-            label: item.label,
-            price: item.price,
-            description: item.description,
-          });
-        }
-        return 0;
+    Axios.get("http://starlord.hackerearth.com/recipe")
+      .then((result) => {
+        // console.log(result);
+        let data = result.data;
+        data.map((item) => {
+          if (`${item.id}` === `${this.props.match.params.id}`) {
+            this.setState({
+              id: item.id,
+              name: item.name,
+              image: item.image,
+              category: item.category,
+              label: item.label,
+              price: item.price,
+              description: item.description,
+            });
+          }
+          return 0;
+        });
+      })
+      .catch((error) => {
+        console.log(error);
       });
-    });
   }
   render() {
     // console.log(this.state);
